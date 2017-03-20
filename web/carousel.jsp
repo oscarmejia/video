@@ -4,7 +4,7 @@
     Author     : oscar
 --%>
 
-<div class="container">
+<div class="container carousel-personal">
             <br>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- indicadores -->

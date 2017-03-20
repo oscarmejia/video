@@ -5,7 +5,7 @@
  */
 package coneccion;
 
-import java.sql.Connection;
+import java.sql.*;
 import java.sql.DriverManager;
 
 /**
@@ -18,7 +18,8 @@ public class conecta {
 
     public Connection conexion() {
         try {
-            conec = DriverManager.getConnection("jdbc:mysql:/localhost/jtablas", "root", "");
+            Class.forName("com.mysql.jdbc.Driver");
+            conec = DriverManager.getConnection("jdbc:mysql://localhost/jtablas", "root", "");
             System.out.println("se conecto");
         } catch (Exception es) {
             es.printStackTrace();

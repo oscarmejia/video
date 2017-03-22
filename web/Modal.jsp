@@ -18,11 +18,11 @@
         </div>
         <div class="modal-body">
             <h1>hola</h1>
-            <div class="container">
-            <table class="table-hover">
+            <div>
+            <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Id</th>&nbsp
+                        <th class="hidden">Id</th>&nbsp
                         <th>Nombre</th>&nbsp
                         <th>Genero</th>&nbsp
                         <th>Duracion</th>&nbsp

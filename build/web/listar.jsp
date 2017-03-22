@@ -31,7 +31,8 @@
                     </thead>
                     <tbody>
                         <%
-                            ResultSet rst = (ResultSet) request.getAttribute("lista");
+                            ResultSet rst=null;
+                            rst = (ResultSet) request.getAttribute("lista");
 
                             while (rst.next()) {
                         %>
@@ -40,7 +41,7 @@
                             <td><%= rst.getString(2)%></td>
                             <td><%= rst.getString(3)%></td>
                             <td>
-                                <a href="Modal.jsp" onclick="document.getElementsByName('myModal').continue" data-toggle="modal" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="Modal.jsp" data-target="#myModal" onclick="document.getElementsByName('myModal')" data-toggle="modal" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
                                 <a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
                                 <a class="btn btn-danger"><span class="glyphicon glyphicon-remove-sign"></span></a>
                             </td>

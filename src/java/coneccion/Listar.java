@@ -43,7 +43,9 @@ public class Listar extends HttpServlet {
             
             request.setAttribute("lista", rs);
             RequestDispatcher rd = request.getRequestDispatcher("listar.jsp");
+            RequestDispatcher drd= request.getRequestDispatcher("Modal.jsp");
             rd.forward(request, response);
+            drd.forward(request, response);
             
         }catch(Exception e){
             

@@ -10,14 +10,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Ingreso de peliculas</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
@@ -27,9 +23,9 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th class="hidden">Id</th>
                             <th>Nombre</th>
-                            <th>Disponibilidad</th>
+                            <th>Genero</th>
                             <th>Opciones</th>
                         </tr>
                     </thead>
@@ -40,11 +36,11 @@
                             while (rst.next()) {
                         %>
                         <tr>
-                            <td><%= rst.getString(1)%></td>
+                            <td class="hidden"><%= rst.getString(1)%></td>
                             <td><%= rst.getString(2)%></td>
                             <td><%= rst.getString(3)%></td>
                             <td>
-                                <a class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="Modal.jsp" onclick="document.getElementsByName('myModal').continue" data-toggle="modal" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></a>
                                 <a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
                                 <a class="btn btn-danger"><span class="glyphicon glyphicon-remove-sign"></span></a>
                             </td>
@@ -57,4 +53,5 @@
             </div>
         </div>
     </body>
+    <%@include file="Modal.jsp" %>
 </html>
